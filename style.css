@@ -117,7 +117,7 @@
     }
 
     .nav_button.active{
-        box-shadow: 0 0 5px 2px black;
+        box-shadow: 0 0 5px 2px rgb(20, 61, 20);
     }
 
     .nav_icon{
