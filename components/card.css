@@ -14,7 +14,6 @@
 
 .question{
     text-align: center;
-    color: white;
 }
 
 .bookmark{
@@ -26,6 +25,7 @@
 }
 
 .cat_tags{
+    color: black;
     display: flex;
     gap:5px;
     align-self: flex-start;

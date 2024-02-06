@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js" defer></script>
 </head>
-<body>
+<body data-js="body">
     <header aria-labelledby="title">
         <img class="app_icon" src="img/new-idea_69628.png" alt="app_icon">
         <h1 id="title">Quiz App</h1>
+        <img 
+        src="img/light-mode.png" 
+        alt="light-mode" 
+        data-js="light-mode" 
+        id="light-button">
+        </img>
     </header>
 
     <main>
         <section class="cards" id="card1">
             <img class="bookmark" src="img/bookmark_wh.png" alt="bookmark icon">
-            <article class="question" aria-label="question">
+            <article class="question" aria-label="question" data-js="question">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ex, tenetur dolor magni excepturi odit similique, earum quia porro nulla, tempore quisquam iusto? Neque tenetur aut itaque ab totam officiis.
             </article>
             <button class="Answer" onclick="">
@@ -35,7 +42,7 @@
         </section>
         <section class="cards" id="card2">
             <img class="bookmark" src="img/bookmark_wh.png" alt="bookmark icon">
-            <article class="question" aria-label="question">
+            <article class="question" aria-label="question" data-js="question">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ex, tenetur dolor magni excepturi odit similique, earum quia porro nulla, tempore quisquam iusto? Neque tenetur aut itaque ab totam officiis.
             </article>
             <button class="Answer" aria-label="show Answer" onclick="">
@@ -55,7 +62,7 @@
         </section>
         <section class="cards" id="card3">
             <img class="bookmark" src="img/bookmark_wh.png" alt="bookmark icon">
-            <article class="question" aria-label="question">
+            <article class="question" aria-label="question" data-js="question">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ex, tenetur dolor magni excepturi odit similique, earum quia porro nulla, tempore quisquam iusto? Neque tenetur aut itaque ab totam officiis.
             </article>
             <button class="Answer" aria-label="show Answer" onclick="">
@@ -75,7 +82,7 @@
         </section>
         <section class="cards" id="card4">
             <img class="bookmark" src="img/bookmark_wh.png" alt="bookmark icon">
-            <article class="question" aria-label="question">
+            <article class="question" aria-label="question" data-js="question">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ex, tenetur dolor magni excepturi odit similique, earum quia porro nulla, tempore quisquam iusto? Neque tenetur aut itaque ab totam officiis.
             </article>
             <button class="Answer" aria-label="show Answer" onclick="">
