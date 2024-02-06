@@ -1,126 +1,26 @@
+@import url('../components/card.css');
+@import url('global.css');
+@import url('../components/buttons.css');
+@import url('../components/navbar.css');
+
+
 @media only screen 
     and (device-width : 414px) 
     and (device-height : 896px) 
     and (-webkit-device-pixel-ratio : 2) { 
-
-    body{
-        font-family: monospace;
-        margin: 0;
-        padding: 0;
-        background-color:rgb(40, 40, 40);
-    }
+        
     
-    header{
-        position: fixed;
-        width: 100%;
-        border-bottom: 2px solid gray;
-        left: 0;
-        top: 0;
-        background-color: rgb(63, 160, 141);
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        z-index: 1;      
+    
+    
 
-    }
+    
 
-    .app_icon{
-        height: 2rem;
-        margin-top: 12px;
-       
-    }
+    
 
-    main{
-        position: relative;
-        top: 80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 160px;
+    
 
-    }
 
-    .cards{
-        display: flex;
-        width: 360px;
-        border: 1px solid gray;
-        border-radius: 8px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        position: relative;
-        background-color: rgba(63, 160, 141,0.5);
-        gap: 10px;
+    
 
-    }
-
-    .question{
-        text-align: center;
-        color: white;
-    }
-
-    .answer{
-        margin-bottom: 15px;
-    }
-
-    .bookmark{
-        position: relative;
-        width: 18px;
-        top: -10px;
-        right: 10px;
-        align-self: flex-end;
-    }
-
-    .cat_tags{
-        display: flex;
-        gap:5px;
-        align-self: flex-start;
-        justify-content: flex-start;
-        margin-left: 5px;
-    }
-
-    .tags{
-        border: 1px solid black;
-        padding: 3px;
-        background-color: rgb(63, 160, 141);
-        border-radius: 4px;
-
-    }
-    footer{
-        margin-left: 0;
-        position: fixed;
-        bottom: 0;
-        border-top: 2px solid gray;
-        display: flex;
-        background-color: rgb(63, 160, 141);
-        height: auto;
-        width: 100%;
-        left: 0;
-        justify-content: center;
-    }
-
-    .nav{
-        display: flex;
-        justify-content: space-around;
-        width: 80%;
-        margin-top: 5px;
-        margin-bottom: 4px;
-    }
-
-    .nav_button{
-        width:70px;
-        text-align: center;
-        z-index: 2;
-        border-radius: 2px;
-        padding: 2px;
-    }
-
-    .nav_button.active{
-        box-shadow: 0 0 5px 2px rgb(0, 0, 0);
-    }
-
-    .nav_icon{
-        height: 40px;
-    }    
+        
 }
