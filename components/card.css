@@ -19,9 +19,26 @@
 .bookmark{
     position: relative;
     width: 18px;
+    height: 22px;
     top: -10px;
     right: 10px;
     align-self: flex-end;
+    background-color: rgba(0,0,0,0);
+    
+}
+
+.bookmark__button{
+    width: 18px;
+    height: 22px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    background-image: url(../img/bookmark_wh.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bookmark__checked{
+    background-image: url(../img/bookmark_wh-bk.png);
 }
 
 .cat_tags{
@@ -38,3 +55,12 @@
     padding: 3px;
     background-color: rgb(63, 160, 141);
     border-radius: 4px;
+}
+
+.answer__button{
+        margin-bottom: 5px;
+}
+
+.answer__text{
+    margin-bottom: 15px;
+}
