@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-around;
     position: relative;
-    background-color: rgba(63, 160, 141,0.5);
+    background-color: var(--green__card);
     gap: 10px;
 
 }
@@ -44,7 +44,7 @@
 .cat_tags{
     color: black;
     display: flex;
-    gap:5px;
+    gap:8px;
     align-self: flex-start;
     justify-content: flex-start;
     margin-left: 5px;
@@ -53,8 +53,9 @@
 .tags{
     border: 1px solid black;
     padding: 3px;
-    background-color: rgb(63, 160, 141);
-    border-radius: 4px;
+    background-color: lightgray;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 2px rgb(0, 0, 0);
 }
 
 .answer__button{

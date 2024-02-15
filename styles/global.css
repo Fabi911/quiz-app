@@ -1,14 +1,24 @@
 :root{
     --min-width:400px;
+    --green__card:rgba(102, 75, 156, 0.7);
+    --bg__dark:linear-gradient(180deg,black 50% ,gray);
+    --bg__headerFooter:rgb(102, 75, 156);
+    --bg__light:linear-gradient(180deg,darkgray 50% ,white);
+    --border__color:rgb(82, 92, 97);
+    --font_color_ligth:black;
+    --font_color_dark:white;
+    --border_size_hf:1px;
 }
 
 body{
     font-family: monospace;
     margin: 0;
     padding: 0;
-    background-color:rgb(40, 40, 40);
+    background:var(--bg__dark);
+    background-repeat: no-repeat;
     min-width: var(--min-width);
-    color: white;
+    color: var(--font_color_dark);
+    height: 100vh;
 }
 
 header{
@@ -16,10 +26,11 @@ header{
     position: fixed;
     width: 100%;
     min-width: var(--min-width);
-    border-bottom: 2px solid gray;
+    border-bottom: var(--border_size_hf) solid var(--border__color);
     left: 0;
     top: 0;
-    background-color: rgb(63, 160, 141);
+    background-color: var(--bg__headerFooter);
+  
     display: flex;
     justify-content: center;
     gap: 5px;
@@ -56,9 +67,9 @@ footer{
     margin-left: 0;
     position: fixed;
     bottom: 0;
-    border-top: 2px solid gray;
+    border-top: var(--border_size_hf) solid var(--border__color);
     display: flex;
-    background-color: rgb(63, 160, 141);
+    background-color: var(--bg__headerFooter);
     height: auto;
     width: 100%;
     min-width: var(--min-width);
@@ -67,8 +78,8 @@ footer{
 }
 
 .light-mode{
-    background-color: white;
-    color: black;
+    background: var(--bg__light);
+    color: var(--font_color_ligth);
 }
 
 #light-button{
