@@ -15,7 +15,6 @@
    const formData = new FormData(event.target);
    let data = Object.fromEntries(formData);
    questionsAdded.unshift(data);
-   console.log(questionsAdded[0].question_form)
    newQuestion(questionsAdded);
    event.target.reset();
    event.target.question_form.focus();
@@ -52,6 +51,29 @@ function newQuestion(array){
   newAnswer.hidden=true;
   newAnswer.textContent=array[0].answer_form;
   newCard.appendChild(newAnswer);
+
+  const newTagBox=document.createElement('section');
+  newTagBox.classList.add("cat_tags");
+  newCard.appendChild(newTagBox);
+
+  
+
+  const tags = array[0].tags_form.split(',');
+   console.log(tags)
+
+
+
+   function createNewTag(array){
+    for(let i=0; i <= array.length-1; i++){
+     const newTag=document.createElement('p');
+     newTag.classList.add('tags');
+     newTag.textContent='#'+array[i];
+     newTagBox.appendChild(newTag);
+    console.log(array[i]);
+   }
+  }
+  createNewTag(tags);
+
 
 
 
