@@ -6,6 +6,7 @@
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="main.js" defer></script>
+    <!-- <script src="form.js" defer></script> -->
 </head>
 <body data-js="body">
     <header aria-labelledby="title">
@@ -19,31 +20,23 @@
         </img>
     </header>
 
-    <main class="main">
-        <section class="cards" id="card1">
-            <img class="bookmark" src="./img/bookmark_wh.png">
-            <article class="question" aria-label="question" data-js="question">
-                Wer wurde 2007 Deutscher Fussballmeister?
-            </article>
-            <button class="answer__button">
-                Show Answer
-            </button>
-            <p class="answer__text" hidden="">
-                VfB Stuttgart
-            </p>
-            <section class="cat_tags">
-                <p class="tags">
-                    <label>#html</label>
-                </p>
-                <p class="tags">
-                    <label>#flexbox</label>
-                </p>
-                <p class="tags">
-                    <label>#css</label>
-                </p>
-            </section>
-        </section>
-       
+    <main>
+       <form class="form" action="" data-js="form">
+            <fieldset class="form__input">
+                <label for="question_form">Enter here the Question! *</label>
+                <input type="text" id="question_form" name="question_form" required placeholder="What...">
+            </fieldset>
+            <fieldset class="form__input">
+                <label for="answer_form" >Enter here the Answer! *</label>
+                <input type="text" id="answer_form" name="answer_form" required placeholder="It's...">
+            </fieldset>
+            <fieldset class="form__input">
+                <label for="tags_form">Give some tags!</label>
+                <input type="text" id="tags_form" name="tags_form" placeholder='"for example "a,b,c"'>
+                <span class="info">* without spaces and separated by commas!</span>
+            </fieldset>
+            <button type="submit">add Question</button>
+       </form>
     </main>
 
     <footer>
