@@ -1,4 +1,4 @@
- // Form for new Questions
+
  const bodyElement=document.querySelector('[data-js="body"]');
  const lightButton = document.querySelector('[data-js="light-mode"]');
  const main =document.querySelector('main')
@@ -6,20 +6,29 @@
  const questionsAdded=[];
  const textAnswerButton="Show Answer"
 
+ // switch between light and dark mode
   lightButton.addEventListener("click", () => {
   bodyElement.classList.toggle("light-mode");
   });
+
+
+  // Read input value
 
  form.addEventListener("submit", (event) => {
    event.preventDefault()
    const formData = new FormData(event.target);
    let data = Object.fromEntries(formData);
-   questionsAdded.unshift(data);
+   questionsAdded.push(data);
    newQuestion(questionsAdded);
    event.target.reset();
    event.target.question_form.focus();
+
+   console.log(questionsAdded);
+
   
 });
+
+// --------------------------------------------create a new Card------------------------------------------
 
 function newQuestion(array){
   const newCard=document.createElement('section');
@@ -38,7 +47,7 @@ function newQuestion(array){
 
   const newQuestionText=document.createElement('article');
   newQuestionText.classList.add("question");
-  newQuestionText.textContent= array[0].question_form;
+  newQuestionText.textContent= array[array.length-1].question_form;
   newCard.appendChild(newQuestionText);
 
   const newButton=document.createElement('button');
@@ -49,7 +58,7 @@ function newQuestion(array){
   const newAnswer=document.createElement('p');
   newAnswer.classList.add("answer__text");
   newAnswer.hidden=true;
-  newAnswer.textContent=array[0].answer_form;
+  newAnswer.textContent=array[array.length-1].answer_form;
   newCard.appendChild(newAnswer);
 
   const newTagBox=document.createElement('section');
@@ -57,28 +66,30 @@ function newQuestion(array){
   newCard.appendChild(newTagBox);
 
   
+    // save input from the tags-input in an array
+    const tags = array[array.length-1].tags_form.split(',');
+    console.log(tags)
 
-  const tags = array[0].tags_form.split(',');
-   console.log(tags)
 
+      // create and add tags in the new Card with for-loop
+      function createNewTag(array){
+        for(let i=0; i <= array.length-1; i++){
+        const newTag=document.createElement('p');
+        newTag.classList.add('tags');
+        newTag.textContent='#'+array[i];
+        newTagBox.appendChild(newTag);
+        console.log(array[i]);
+      }
+      }
 
-
-   function createNewTag(array){
-    for(let i=0; i <= array.length-1; i++){
-     const newTag=document.createElement('p');
-     newTag.classList.add('tags');
-     newTag.textContent='#'+array[i];
-     newTagBox.appendChild(newTag);
-    console.log(array[i]);
-   }
-  }
+   //call the function   
   createNewTag(tags);
 
+//------------------------------ end create a new Card---------------------------------
 
 
 
-// Form for new Question end ----------------------------------------
-
+// Function for show and hide the answer
 function hideAnswer() {
 newAnswer.setAttribute("hidden", "");
 newButton.textContent='Show Answer';
@@ -89,22 +100,17 @@ function showAnswer() {
   newButton.textContent='Hide Answer';
 }
 
-
-
-
-  newBookmarkButton.addEventListener("click", () => {
-  newBookmarkButton.classList.toggle('bookmark__checked')
-  });
-
-
 newButton.addEventListener("click", ()=>{
   if(newAnswer.hidden===true){
   showAnswer();
   }else{
     hideAnswer()
   }
-
 })
+// toggle the icon from the bookmark
+newBookmarkButton.addEventListener("click", () => {
+  newBookmarkButton.classList.toggle('bookmark__checked')
+  });
 
 }
 
