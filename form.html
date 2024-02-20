@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="main.js" defer></script>
-    <!-- <script src="form.js" defer></script> -->
+    <script src="main.js" type="module"></script>
+    <script src="/components/form/form.js" type="module"></script>
 </head>
 <body data-js="body">
     <header aria-labelledby="title">
@@ -20,7 +20,7 @@
         </img>
     </header>
 
-    <main>
+    <main class="main__form">
        <form class="form" action="" data-js="form">
             <fieldset class="form__input">
                 <label for="question_form">Enter here the Question!</label>

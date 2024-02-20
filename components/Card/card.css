@@ -32,13 +32,14 @@
     height: 22px;
     border: none;
     background-color: rgba(0,0,0,0);
-    background-image: url(../img/bookmark_wh.png);
+    background-image: url(/img/bookmark_wh.png);
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .bookmark__checked{
-    background-image: url(../img/bookmark_wh-bk.png);
+    background-image: url(/img/bookmark_wh-bk.png);
 }
 
 .cat_tags{
