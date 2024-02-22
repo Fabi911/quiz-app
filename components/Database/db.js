@@ -15,5 +15,16 @@ const apiUrl ="https://the-trivia-api.com/v2/questions/"
             alert("Network error :-(")
             return null;
         }
+        //const fs= require;
+        // const pathData="data.json"
+        // fs.writeFile(pathData, json, 'utf8', (err) => {
+        //     if (err) {
+        //         console.error('Fehler beim Schreiben in die Datei:', err);
+        //         return;
+        //     }
+        //     console.log('Daten erfolgreich in die Datei geschrieben.');
+        // });
     }
+
+   
     

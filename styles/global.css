@@ -1,7 +1,7 @@
 :root{
     --min-width:400px;
     --green__card:rgba(102, 75, 156, 0.7);
-    --bg__dark:linear-gradient(180deg,black 50% ,gray);
+    --bg__dark:linear-gradient(to bottom,black 50% ,gray);
     --bg__headerFooter:rgb(102, 75, 156);
     --bg__light:linear-gradient(180deg,darkgray 50% ,white);
     --border__color:rgb(82, 92, 97);
@@ -11,14 +11,16 @@
 }
 
 body{
+    height:100%;
+    overflow: hidden;
     font-family: monospace;
     margin: 0;
     padding: 0;
     background:var(--bg__dark);
-    background-repeat: no-repeat;
+
     min-width: var(--min-width);
     color: var(--font_color_dark);
-    height: 100vh;
+    
 }
 
 header{

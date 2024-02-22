@@ -7,7 +7,7 @@ const main =document.querySelector('.main')
     export async function createNewCards(){
         const questionsAndAnswer = await fetchData();
         console.log(questionsAndAnswer)
-        await questionsAndAnswer.forEach((element) => {
+        questionsAndAnswer.forEach((element) => {
     
             const newCard=document.createElement('section');
             newCard.classList.add('cards');
@@ -19,7 +19,7 @@ const main =document.querySelector('.main')
                         ${element.question.text}
                         
                     </article>
-                    <button class="answer__button">
+                    <button class="answer__button" data-js="answerButton">
                         Show Answer
                     </button>
                     <p class="answer__text" hidden="">
